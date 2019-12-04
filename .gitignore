@@ -1,0 +1,14 @@
+/resources/views/cache
+/public/storage
+/storage/app
+
+
+/node_modules
+/public/storage
+/storage/*.key
+!vendor/backpack
+/vendor
+/.idea
+/.env
+/.env.beta
+/config/checkip.php
