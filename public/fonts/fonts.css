@@ -1,0 +1,44 @@
+/*================================[SFUIText]================================*/
+@font-face{
+    font-family:'SFUIText-Bold';
+    src:url('fontoteka_152219855/SFUIText-Bold.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'SFUIText-Regular';
+    src:url('fontoteka_152219855/SFUIText-Regular.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+/*================================[SFProDisplay]================================*/
+@font-face{
+    font-family:'SFProDisplay-Medium';
+    src:url('SFProDisplay/SF-Pro-Display-Medium.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'SFProDisplay-Bold';
+    src:url('SFProDisplay/SF-Pro-Display-Bold.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'SFProDisplay-Regular';
+    src:url('SFProDisplay/SF-Pro-Display-Regular.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'SFProDisplay-Italic';
+    src:url('SFProDisplay/SF-Pro-Display-RegularItalic.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'SFProDisplay-Heavy';
+    src:url('SFProDisplay/SF-Pro-Display-Heavy.otf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
