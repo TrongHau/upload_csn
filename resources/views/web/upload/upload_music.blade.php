@@ -50,7 +50,7 @@ $perMission_Duyet_Sua_Nhac =  Auth::user()->hasPermission('duyet_sua_nhac');
                 <div class="tab-content upload-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="upload_lyric" role="tabpanel" aria-labelledby="upload_lyric-tab">
                         <div class="box_upload_file d-flex align-items-center justify-content-center{{ $errors->has('drop_files') ? ' has-error-drop-file' : '' }}" >
-                            <form action="/dang-tai/file-nhac?type={{$typeUpload}}" class="box_process{{ ($errors->has('drop_html') || isset($music)) ? '' : ' dropzone' }}" enctype="multipart/form-data">
+                            <form action="{{env("UPLOAD_TEMPLATE_URL")}}/dang-tai/file-nhac?type={{$typeUpload}}" class="box_process{{ ($errors->has('drop_html') || isset($music)) ? '' : ' dropzone' }}" enctype="multipart/form-data">
                                 @if(old('drop_html'))
                                     <?php echo old('drop_html'); ?>
                                 @else
@@ -103,7 +103,7 @@ $perMission_Duyet_Sua_Nhac =  Auth::user()->hasPermission('duyet_sua_nhac');
                             </div>
                         @endif
                         <hr>
-                        <form action="" method="post" id="form_music" class="form_music has_drop_file" accept-charset="utf-8" enctype="multipart/form-data">
+                        <form action="{{env("UPLOAD_TEMPLATE_URL")}}/dang-tai/nhac" method="post" id="form_music" class="form_music has_drop_file" accept-charset="utf-8" enctype="multipart/form-data">
                             <div class="row row10px">
                                 <div class="col-12">
                                     <div class="box_right_upload form-row">
@@ -856,7 +856,7 @@ $perMission_Duyet_Sua_Nhac =  Auth::user()->hasPermission('duyet_sua_nhac');
                         $('.choose_music_search').find('.media-title').html('<span class="search_highlight">' + title + '</span>');
                         $('.suggest_music').val($( this ).attr('href') || $( this ).find('a').attr('href'));
                         $.ajax({
-                            url: window.location.origin + '/dang-tai/noi-dung-chinh-sua-dang-tai',
+                            url: '{{env("UPLOAD_TEMPLATE_URL")}}/dang-tai/noi-dung-chinh-sua-dang-tai',
                             type: "POST",
                             dataType: "json",
                             data: {
@@ -930,7 +930,7 @@ $perMission_Duyet_Sua_Nhac =  Auth::user()->hasPermission('duyet_sua_nhac');
                     delete $.ajaxSettings.headers["X-CSRF-TOKEN"];
                     $.ajax( {
                         // url: window.location.origin + "/search/real",
-                        url: "https://solr2.chiasenhac.vn/search/real",
+                        url: "{{env("SEARCH_REAL_URL")}}/search/real",
                         dataType: "json",
                         data: {
                             q: request.term,
